@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+const pizza = {
+    name: "Hawaiian",
+    price: 15,
+    category: "entree",
+    popularity: 7,
+    rating: 7,
+    tags: ["sweet","thin crust","kids"]
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -63,8 +70,8 @@
 */
 
 //CODE HERE
-
-
+let {price} = pizza
+console.log(price)
 /*
     Fourth, and last, destructure the category
     property.
@@ -73,8 +80,8 @@
 */
 
 //CODE HERE
-
-
+let {category} = pizza
+console.log(category)
 //////////////////PROBLEM 3////////////////////
 /* 
     Create an array with about 5 objects in it.
@@ -88,7 +95,40 @@
 */
 
 //CODE HERE
-
+let foodArr = [
+    {
+        name: "calzone",
+        price: 11,
+        category: "entree",
+        popularity: 5,
+        rating: 8,
+        tags:["Marinara", "Gluten-unfriendly"]
+    },
+    {
+        name: "salad",
+        price: 9,
+        category: "appetizer",
+        popularity: 9,
+        rating: 8,
+        tags: ["Caesar", "Healthier Choice"]
+    },
+    {
+        name: "chocolate cake",
+        price: 7,
+        category: "dessert",
+        popularity: 6,
+        rating: 8,
+        tags: ["Ice Cream included", "Chilled"]
+    },
+    {
+        name: "Creamy Chicken Pesto",
+        price: 13, 
+        category: "entree",
+        popularity: 10,
+        rating: 10,
+        tags: ["Served fresh off the pan", "whole wheat available"]
+    },
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -105,7 +145,15 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(() => {
+    for (i = 0; i < foodArr.length; i++) {
+        for (j = 0; j < foodArr[i].length; i++){
+        if (foodArr[i].tags === "chilled") {
+            return foodArr[i]
+        }
+    }
+    }
+})
 
 
 
