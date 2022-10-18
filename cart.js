@@ -57,7 +57,7 @@ console.log(summedPrice)
 
 //CODE HERE
 const calcFinalPrice = arr.map((cartTotal, couponValue, tax) => {
-    return cartTotal*(1+tax)-couponValue
+    return cartTotal+cartTotal*tax-couponValue
 })
 
 
@@ -101,8 +101,8 @@ const calcFinalPrice = arr.map((cartTotal, couponValue, tax) => {
 //CODE HERE
 
 let order = {
-    'name': "George",
-    'numberOfItems': 3,
-    'toStayOrToGo': "to go",
-    'withFries': true
+    name: "George",
+    numberOfItems: 3,
+    toStayOrToGo: "to go",
+    withFries: true
 };

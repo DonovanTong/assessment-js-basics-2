@@ -102,7 +102,7 @@ class Manager extends Employee {
         console.log(`${this.name} manages ${this.employees}.`)
     }
     addEmployee(emp) {
-        this.employees += emp
+        this.employees.push(emp)
     }
 }
 
@@ -118,14 +118,14 @@ class Manager extends Employee {
 */
 
 //CODE HERE
-const manager1 = new Manager ('Winston', 'Weekday mornings, weekday afternoons', 'Cece and Schmidt')
+const manager1 = new Manager ('Winston', 'Weekday mornings, weekday afternoons', ['Cece', 'Schmidt'])
 /*
     Call the `getEmployees` method on the
     `manager` object.  
 */
 
 //CODE HERE
-manager1.getEmployees()
+manager1.getEmployees([])///////////////////
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 

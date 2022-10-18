@@ -145,15 +145,8 @@ let foodArr = [
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(() => {
-    for (i = 0; i < foodArr.length; i++) {
-        for (j = 0; j < foodArr[i].length; i++){
-        if (foodArr[i].tags === "chilled") {
-            return foodArr[i]
-        }
-    }
-    }
-})
+const filteredFood = foodArr.filter((foodObj) => foodObj.tags.includes('Gluten-unfriendly'))
+console.log(filteredFood)
 
 
 
@@ -197,8 +190,18 @@ const filteredFood = foodArr.filter(() => {
 */
 
 //CODE HERE
-
-
+function filterByProperty(property,number,type) {
+    let filteredArray = foodArr.filter(() => {
+        if (type === 'above') {
+            return property > number
+            /// Cannot be foodObj.property because
+        }else if (type === 'below') {
+            return property < number
+        }
+    })
+    return filteredArray;
+    console.log(filteredArray)
+}
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
@@ -207,3 +210,5 @@ const filteredFood = foodArr.filter(() => {
 */
 
 //CODE HERE
+let filteredProperty = filterByProperty("rating", 6, "below")
+console.log(filteredProperty)
